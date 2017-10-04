@@ -35,8 +35,11 @@ module HyperStore
           end
 
           name, initial_value = args[0].shift
-        # Otherwise just the name is passed in by itself first
+        elsif args.count == 3
+          # name, initial value is passed in by first and second
+          name, initial_value = args.shift(2)
         else
+          # Otherwise just the name is passed in by itself first
           name = args.shift
         end
 
