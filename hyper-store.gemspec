@@ -6,7 +6,7 @@ require 'hyper-store/version'
 Gem::Specification.new do |spec|
   spec.name          = 'hyper-store'
   spec.version       = HyperStore::VERSION
-  spec.authors       = ['catmando', 'adamcreekroad']
+  spec.authors       = ['catmando', 'adamcreekroad', 'janbiedermann']
   spec.email         = ['mitch@catprint.com']
 
   spec.summary       = 'Flux Stores and more for Hyperloop'
@@ -19,23 +19,20 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'hyperloop-config', '>= 0.9.2'
-  spec.add_development_dependency 'bundler', '~> 1.12'
-  #spec.add_development_dependency 'hyper-react', '>= 0.12.0'
-  spec.add_development_dependency 'hyper-spec'
+  spec.add_dependency 'hyperloop-config', '0.15.0-autobahn-a8'
+  spec.add_dependency 'opal'
+  spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'hyper-react', '0.15.0-autobahn-a8'
+  spec.add_development_dependency 'hyper-spec', '0.15.0-autobahn-a8'
   spec.add_development_dependency 'listen'
-  spec.add_development_dependency 'opal'
   spec.add_development_dependency 'opal-browser'
-  spec.add_development_dependency 'opal-rails'
+  spec.add_development_dependency 'opal-rails', '>= 0.9.3'
   spec.add_development_dependency 'pry-byebug'
-  spec.add_development_dependency 'rails'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'react-rails', '< 1.10.0'
+  spec.add_development_dependency 'rails', '>= 5.1.4'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'react-rails', '~> 2.3.1'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rspec-steps'
-  spec.add_development_dependency 'sqlite3'
-  spec.add_development_dependency 'hyper-react'
-
-  # Keep linter-rubocop happy
   spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'sqlite3'
 end

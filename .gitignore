@@ -11,6 +11,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+Gemfile.lock
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
@@ -44,3 +45,9 @@ bower.json
 # Ignore test_app tmp folders
 /test_app/tmp
 /test_app/log
+
+# ignore gem
+*.gem
+
+# ignore IDE files
+.idea
